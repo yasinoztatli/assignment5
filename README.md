@@ -1,16 +1,14 @@
-# React + Vite
+# Assignment 5: Simple Product Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## File Organization
+- `src/main.jsx`: The entry point of the application.
+- `src/App.jsx`: The root component managing the state (`showProducts` and `name`) and rendering the layout.
+- `src/components/ProductList.jsx`: Renders a static list of products using the `.map()` function.
+- `src/components/Product.jsx`: A reusable component that takes `title` and `price` as props and renders a single product.
+- `src/components/Card.jsx`: A layout wrapper component that uses the `children` prop for composition.
 
-Currently, two official plugins are available:
+## Challenges Faced
+- Managing the conditional rendering of the `ProductList` component strictly through the `App` component's state.
+- Ensuring the `Card` component remains generic and only handles layout responsibilities using the `children` prop without knowing what it renders.
+- Implementing controlled inputs for the name field so the React state remains the single source of truth.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
